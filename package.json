@@ -2,13 +2,9 @@
   "name": "apollo-course",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "npm --prefix=client start & npm --prefix=server start"
   },
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "prettier": "^2.2.1"
-  }
+  "license": "ISC"
 }

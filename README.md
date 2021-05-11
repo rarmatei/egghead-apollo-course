@@ -49,6 +49,14 @@ or explore specific notes in more detail, getting access to more specialised tex
 Towards the end of the course we'll be adding a "collaborative" layer to the app, where we'll subscribe (via websocket) to updates from other users
 and integrate those into our notes.
 
+We'll be looking at how Apollo helps us to:
+- easily handle loading states when grabbing notes data from the server
+- store notes in the local cache so other components can retrieve them quickly
+- automatically re-render notes whenever their data changes in the local cache
+- optimistically update the UI whenever a user edits a note, so that it feels quick, and then sync the changes to the server in the background
+- sync the cache to the browser's local storage, so that notes load instantly when the user opens the app
+- and many others!
+
 ## Running the project
 
 There are 2 folders: `./client` and `./server`. We will mainly work in the client, but we need the server to act as a GraphQL backend.
