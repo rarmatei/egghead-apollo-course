@@ -58,7 +58,7 @@ We'll be looking at how Apollo helps us to:
 - sync the cache to the browser's local storage, so that notes load instantly when the user opens the app
 - and many others!
 
-[App Mock](./note-tacking-app.png)
+![App Mock](./note-tacking-app.png)
 
 ## Running the project
 
