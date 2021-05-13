@@ -12,7 +12,7 @@ running on our clients' machines (imagine multiple users chatting with each othe
 But communicating over the network is slow. Your users will want the app to feel like it is responsive to their actions.
 If you request the same data twice on the client, it should re-use the previous response, without waiting on a new request.
 If a component makes a request to the backend to change a specific entity, we already know on the client what we want to change
-and how we want to change it, so if the server tells us the request succeeded, all other components in your app interested in that entity should instantly 
+and how we want to change it, so if the server tells us the request succeeded, all other components in your app interested in that entity should instantly
 re-render, without having to make a follow-up GET call.
 
 But introducing optimisations like these can come at the risk of stale or even falsy data. If we share data between all components so that it can
@@ -22,12 +22,12 @@ wrong data, so it's not okay.
 
 ### Apollo Client
 
-This is where GraphQL and Apollo Client can help. 
+This is where GraphQL and Apollo Client can help.
 
 Using GraphQL, we can organise the data we care about as a graph.
 By making sense of it that way, we can react to changes in that graph more reliably: if a component that displays a full blog post
 makes a change to that post's title, then a different component that displays a minimal list of blog post titles can react to that change and
-also re-render the title of that post's title in its list. Even though they display mostly different data, they "realised" that the blog post 
+also re-render the title of that post's title in its list. Even though they display mostly different data, they "realised" that the blog post
 refers to the same entity.
 
 And because GraphQL requests cannot natively be cached by the browser, as their shape and form change often, Apollo brings a versatile
@@ -50,12 +50,15 @@ Towards the end of the course we'll be adding a "collaborative" layer to the app
 and integrate those into our notes.
 
 We'll be looking at how Apollo helps us to:
+
 - easily handle loading states when grabbing notes data from the server
 - store notes in the local cache so other components can retrieve them quickly
 - automatically re-render notes whenever their data changes in the local cache
 - optimistically update the UI whenever a user edits a note, so that it feels quick, and then sync the changes to the server in the background
 - sync the cache to the browser's local storage, so that notes load instantly when the user opens the app
 - and many others!
+
+[App Mock](./note-tacking-app.png)
 
 ## Running the project
 
